@@ -73,32 +73,35 @@
   • <strong>원인 분석</strong>: 서버 JSON 데이터에 null/빈 값 포함 → 프론트엔드에서 예외처리 없이 바인딩
   <br/>
   • <strong>해결 방법</strong>: Thymeleaf 내에서 th:if, th:unless 조건문으로 기본값 렌더링 처리하여 UX 안정성 확보
-    • <strong>효과</strong>: 서버 응답 스펙 명확화 및 필드 기본값 초기화로 프론트/백엔드 데이터 불일치 최소화
+  <br/>
+  • <strong>효과</strong>: 서버 응답 스펙 명확화 및 필드 기본값 초기화로 프론트/백엔드 데이터 불일치 최소화
+</details>
 
-1.	프론트엔드 팔로우 버튼 undefined 값 문제
-•	문제: 서버에서 받아온 일부 사용자 데이터 필드가 null 또는 누락되어, 프론트엔드에서 undefined 값으로 출력되며 UI가 깨짐
-•	원인 분석: 서버 JSON 데이터에 null/빈 값 포함 → 프론트엔드에서 예외처리 없이 바인딩
-•	해결방안: Thymeleaf 내에서 th:if, th:unless 조건문으로 기본값 렌더링 처리하여 UX 안정성 확보
-•	효과: 서버 응답 스펙 명확화 및 필드 기본값 초기화로 프론트/백엔드 데이터 불일치 최소화
+<details>
+  <summary><strong>2. 차단한 사용자가 친구/팔로잉 목록에 계속 노출</strong></summary>
+  • <strong>문제 상황</strong>: 차단한 사용자가 여전히 목록에 노출되고, UI에 차단 상태 반영 안 됨
+  <br/>
+  • <strong>원인 분석</strong>: DB 쿼리에서 차단 상태 조건 누락 → 필터링 미흡
+  <br/>
+  • <strong>해결 방법</strong>: 백엔드 쿼리 수정: 사용자 관계 테이블에서 차단 관계 조건 추가 (예: WHERE blocked = false)
+   <br/>
+                                프론트엔드: 렌더링 시 차단 사용자 추가 필터링 적용
+  <br/>
+  • <strong>효과</strong>: 차단 기능 신뢰성 강화 및 사용자 경험 향상
+</details>
 
-2.	차단한 사용자가 친구/팔로잉 목록에 계속 노출
-•	문제: 차단한 사용자가 여전히 목록에 노출되고, UI에 차단 상태 반영 안 됨
-•	원인 분석: DB 쿼리에서 차단 상태 조건 누락 → 필터링 미흡
-•	해결방안:
-백엔드 쿼리 수정: 사용자 관계 테이블에서 차단 관계 조건 추가 (예: WHERE blocked = false)
-프론트엔드: 렌더링 시 차단 사용자 추가 필터링 적용
-•	효과: 차단 기능 신뢰성 강화 및 사용자 경험 향상
-
-3.	팔로우/차단 후 즉시 UI 반영 안 됨
-•	문제: 상태 변경 후에도 UI가 즉시 업데이트되지 않고 새로고침 필요
-•	원인 분석: API 호출 성공 후에도 프론트엔드 상태 갱신 로직 누락
-•	해결방안: 액션 성공 시 isFollowing, isBlocked 상태 직접 업데이트하거나, 데이터 재요청(fetch)으로 UI 동기화
-•	효과: 변경 사항이 실시간 반영되어 직관적이고 자연스러운 UX 제공
-
-
+<details>
+  <summary><strong>3. 팔로우/차단 후 즉시 UI 반영 안 됨</strong></summary>
+  • <strong>문제 상황</strong>: 상태 변경 후에도 UI가 즉시 업데이트되지 않고 새로고침 필요
+  <br/>
+  • <strong>원인 분석</strong>: API 호출 성공 후에도 프론트엔드 상태 갱신 로직 누락
+  <br/>
+  • <strong>해결 방법</strong>: 액션 성공 시 isFollowing, isBlocked 상태 직접 업데이트하거나, 데이터 재요청(fetch)으로 UI 동기화
+  <br/>
+  • <strong>효과</strong>: 서변경 사항이 실시간 반영되어 직관적이고 자연스러운 UX 제공
 </details>
 <hr/>
-
+  
 ### 느낀 점
 
 ![느낀점](https://github.com/user-attachments/assets/d10d43ec-55ad-490e-a0ab-fd0251924a74)
