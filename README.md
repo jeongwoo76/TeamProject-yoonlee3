@@ -99,10 +99,10 @@
   <br/>
   • <strong>해결 방법</strong>: 액션 성공 시 isFollowing, isBlocked 상태 직접 업데이트하거나, 데이터 재요청(fetch)으로 UI 동기화
   <br/>
-  • <strong>효과</strong>: 서변경 사항이 실시간 반영되어 직관적이고 자연스러운 UX 제공
+  • <strong>효과</strong>: 변경 사항이 실시간 반영되어 직관적이고 자연스러운 UX 제공
 </details>
 <hr/>
   
 ### 느낀 점
 
-![느낀점](https://github.com/user-attachments/assets/85c55cea-ccc5-4b4b-b807-f89a77cd0333)
+![느낀점](https://github.com/user-attachments/assets/c47c49f6-d2d0-4c4c-a34a-ae43752f12ae)
