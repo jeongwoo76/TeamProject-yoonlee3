@@ -83,9 +83,10 @@
   <br/>
   • <strong>원인 분석</strong>: DB 쿼리에서 차단 상태 조건 누락 → 필터링 미흡
   <br/>
-  • <strong>해결 방법</strong>: 백엔드 쿼리 수정: 사용자 관계 테이블에서 차단 관계 조건 추가 (예: WHERE blocked = false)
+  • <strong>해결 방법</strong>:  <br/>
+  백엔드 쿼리 수정: 사용자 관계 테이블에서 차단 관계 조건 추가 (예: WHERE blocked = false)
    <br/>
-                                프론트엔드: 렌더링 시 차단 사용자 추가 필터링 적용
+  프론트엔드: 렌더링 시 차단 사용자 추가 필터링 적용
   <br/>
   • <strong>효과</strong>: 차단 기능 신뢰성 강화 및 사용자 경험 향상
 </details>
