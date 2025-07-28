@@ -104,4 +104,4 @@
   
 ### 느낀 점
 
-![느낀점](https://github.com/user-attachments/assets/d10d43ec-55ad-490e-a0ab-fd0251924a74)
+![느낀점](https://github.com/user-attachments/assets/fcd75602-9284-48d7-8816-146f8b58fcc0)
