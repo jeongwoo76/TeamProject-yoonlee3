@@ -105,4 +105,4 @@
   
 ### 느낀 점
 
-![느낀점](https://github.com/user-attachments/assets/150d06b2-72a6-4e53-8e5c-c559a0e0b4c5)
+![느낀점](https://github.com/user-attachments/assets/596918e3-ef5f-4044-b8f5-91911826d64a)
