@@ -53,8 +53,8 @@
 
 [![Watch the video](https://github.com/user-attachments/assets/4230162a-273b-4fd0-9b43-8c85db57b1bd)](https://www.youtube.com/watch?v=fyXjxewcSSE)
 
-1. 유저 팔로우, 언팔로우 맞팔로우 설계 및 기능 구현
-2. 유저 차단 설계 및 기능 구현
+1. 유저 팔로우, 언팔로우, 맞팔로우 CRUD 설계 및 기능 구현
+2. 유저 차단 CRUD 설계 및 기능 구현
 
 
 <hr/>
